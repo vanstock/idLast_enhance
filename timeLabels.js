@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Время надписей в виде часов и минут. Только на русском языке.
 // @namespace    idLast.com
-// @version      0.1
+// @version      0.2
 // @description  Делает отображение времени надписей на idLast более понятным
 // @author       vanstock | vanstock.lj.com
 // @include      *idlast.com/*
