@@ -22,7 +22,7 @@
         var minutes = old_time%60 + "м.";
         if (hours == '0ч.') hours = '';
         if (minutes == '0м.') minutes = '';
-        var new_time = hours + ' ' + minutes;
+        var new_time = hours + ' ' + minutes+'*';
 
         // теперь заменяю старое значение на новое: делаю элемент, вставляю новый перед старым, удаляю старый (его индекс сдивнется)
         var change = document.createElement("div");
