@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Отображение длительности висения «надписей» в форме часов и минут. 
 // @namespace    idLast.com
-// @version      1.0
+// @version      1.1
 // @description  Делает отображение длительности висения «надписей» на idLast более понятным. Только на русском языке.
 // @author       vanstock | vanstock.lj.com
 // @include      *idlast.com/*
@@ -22,12 +22,12 @@
         var hours = Math.floor(old_time/60) + " ч.";
         var minutes = old_time%60 + " м.";
         if (hours == '0 ч.') hours = '';
-        if (minutes == '0 м.') minutes = '';
+        if (minutes == '0 мин.') minutes = '';
         var new_time = hours + ' ' + minutes;
 
         // теперь заменяю старое значение на новое: делаю элемент, вставляю новый перед старым, удаляю старый (его индекс сдивнется)
         var change = document.createElement("div");
-        change.innerHTML = leftside_divs[i].innerHTML.replace(old_time, new_time).replace('мин.','');
+        change.innerHTML = leftside_divs[i].innerHTML.replace(old_time+' мин.', new_time);
         leftside_divs[i].parentNode.insertBefore(change, leftside_divs[i]);
         leftside_divs[i].parentNode.removeChild(leftside_divs[i+1]);
     }
