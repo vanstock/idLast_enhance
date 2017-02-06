@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Отображение длительности висения «надписей» в форме часов и минут. 
 // @namespace    idLast.com
-// @version      1.1
+// @version      1.2
 // @description  Делает отображение длительности висения «надписей» на idLast более понятным. Только на русском языке.
 // @author       vanstock | vanstock.lj.com
 // @include      *idlast.com/*
