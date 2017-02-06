@@ -20,10 +20,11 @@
         // занудно ракладываю время по частям, чтобы исключать нулевые варианты
         var old_time = str.split(' ')[3];
         var hours = Math.floor(old_time/60) + " ч.";
-        var minutes = old_time%60 + " м.";
+        var minutes = old_time%60 + " мин.";
         if (hours == '0 ч.') hours = '';
         if (minutes == '0 мин.') minutes = '';
         var new_time = hours + ' ' + minutes;
+        if (new_time = ' ') new_time = "моментальные!";
 
         // теперь заменяю старое значение на новое: делаю элемент, вставляю новый перед старым, удаляю старый (его индекс сдивнется)
         var change = document.createElement("div");
